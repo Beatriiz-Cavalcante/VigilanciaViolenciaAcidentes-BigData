@@ -48,8 +48,6 @@ com códigos (classificação internacional de doenças –CID 10) e nomes dos a
 
 'SEM_PRI' - Varchar2(6). Categoria: Semanas no calendário epidemiológico pradonizado. Descrição: Semana epidemiológica dos números sintomas. Características: Preenchida automaticamente a partir da data de primeiros sintomas no diagnostico. 
 
-'ANO_NASC'
-
 'NU_IDADE_N' - number(4). Categoria: A composição da variável obedece o seguinte critério: 1º dígito: 1. Hora, 2. Dia, 3. Mês, 4. Ano. 
 Ex: 3009 – nove meses, 4018 – dezoito anos. Descrição: quando não há data de nascimento a idade deve ser digitada segundo informação fornecida pelo paciente como aquela referida por ocasião da data da ocorrência ou na falta desse dado é registrada a idade aparente. Características: Campo Obrigatório: Caso a data de nascimento não esteja preenchida. Preenchido automaticamente se Data de nascimento for preenchida. Calculada entre Data de nascimento e Data de
 Ocorrência;Campo composto pela unidade de medida de tempo e numero da idade.- Se campo < 4007 (7 anos), campo escolaridade é preenchido com 10- Não se aplica.
@@ -88,7 +86,6 @@ categoria = 8 (não se aplica).Se campo 38 = 1, não aceitar categoria = 8 (não
 'TRAN_MENT' - Varchar2(1). Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição: Se o paciente possui algum tipo de transtorno mental. Campo essencial. Se campo 38 for =2 ou 9, preencher automaticamente com categoria 8 (não se aplica.). Se campo 38 = 1, não aceitar categoria 8 (não se aplica).
 
 'TRAN_COMP' - Varchar2(1). Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição: Se o paciente possui algum tipo de transtorno de comportamento. Campo essencial. Se campo 38 for =2 ou 9, preencher automaticamente com categoria 8 (não se aplica.). Se campo 38 = 1, não aceitar categoria 8 (não se aplica).
-
 
 'DEF_OUT' - Varchar2(1). Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição: Se o paciente possui algum tipo de outras deficiências/síndromes. Campo essencial. Se campo 38 for =2 ou 9, preencher automaticamente com categoria 8 (não se aplica.). Se campo 38 = 1, não aceitar categoria 8 (não se aplica).
 
@@ -155,8 +152,6 @@ violência sexual for = 2 ou 9.
 
 'SEX_ESTUPR' - Varchar2(1). Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição: Informar se ocorreu estupro. Campo essencial: Habilitado se o campo 56 - violência sexual for =1. Categoria 8 (não se aplica) se o campo 56 - tipo de violência sexual for =2 ou 9.
 
-'SEX_PUDOR' - not found
-
 'SEX_PORNO' - Varchar2(1). Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição:Informar se ocorreu pornografia infantil. Campo essencial: Habilitado se o campo 56 - violência sexual for = 1. Categoria 8 (não se aplica) se campo 56 - tipo de violência sexual for = 2 ou 9.
 
 'SEX_EXPLO' - Varchar2(1). Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição: Informar se ocorreu exploração sexual. Campo essencial: Habilitado se campo 56 - violência sexual for =1. Categoria 8 (não se aplica) se campo 56 - tipo de violência sexual for =2 ou 9.
@@ -164,10 +159,6 @@ violência sexual for = 2 ou 9.
 'SEX_OUTRO' - Varchar 2. Categoria: 1. Sim, 2. Não, 8. Não se aplica, 9. Ignorado. Descrição: Informar se ocorreu outro tipo de violência sexual. Campo essencial: Habilitado se campo 56 - violência sexual for =1. Categoria 8 (não se aplica) se campo 56 - tipo de violência sexual for 2 = ou 9. Se categoria selecionada for = 2, 8 ou 9, pular para campo 59. Procedimento realizado.
 
 'SEX_ESPEC' - Varchar2(30). Descrição: Especificar qual outro tipo de violência sexual. Campo obrigatório se o campo 58. Se ocorreu violência sexual, qual tipo? - Outro =1. 
-
-'PEN_ORAL', 'PEN_ANAL', 'PEN_VAGINA', 'PROC_DST', 'PROC_HIV', 'PROC_HEPB', 'PROC_SANG', 'PROC_SEMEN', 'PROC_VAGIN', 'PROC_CONTR', 'PROC_ABORT', 'CONS_ABORT', 'CONS_GRAV', 'CONS_DST', 'CONS_SUIC', 'CONS_MENT', 'CONS_COMP', 'CONS_ESTRE', 'CONS_OUTR', 'CONS_ESPEC', 'LESAO_NAT', 'LESAO_ESPE', 'LESAO_CORP', 'NUM_ENVOLV' - not found 
-
-'REL_SEXUAL' - not found.
 
 'REL_PAI' - Varchar2(1). Categoria: 1. Sim, 2. Não, 9. Ignorado. Descrição: Informar se o provável autor da agressão era o pai. Campo obrigatório.
 
@@ -220,18 +211,7 @@ violência sexual for = 2 ou 9.
 
 'CIRC_LESAO' - Varchar2(5). Categoria: Tabela de agravos do sistema com códigos (classificação internacional de doenças - CID 10) e nomes dos agravos. Descrição: Nome e código do agravo. Campo essencial. 
 
-'CLASSI_FIN' - not found
-'EVOLUCAO' - not found
-'DT_OBITO' - not found
-'DT_DIGITA' - not found
-'DT_TRANSUS' - not found
-'DT_TRANSDM' - not found
-'DT_TRANSSM', 'DT_TRANSRM', 'DT_TRANSRS', 'DT_TRANSSE' -  all not found
-
 'REL_MAD' - Varchar2(1). Categoria: 1. Sim, 2. Não, 9. Ignorado. Descrição: Informar se o provável autor da agressão era a madrasta. Campo obrigatório.
-
-'TPUNINOT'- not found
-
 
 'ORIENT_SEX' - Varchar2(1). Categoria: 1. Heterossexual, 2. Homossexual(gay/lésbica), 3. Bissexual, 8. Não se aplica, 9. Ignorado. Descrição: Orientação sexual do paciente. Campo Obrigatório se >=10 anos. Categoria (8) Não se Aplica se idade do paciente for <=9 anos.
 
@@ -267,9 +247,25 @@ violência sexual for = 2 ou 9.
 
 'INFAN_JUV' - Varchar2(1). Categoria: 1. Sim, 2. Não, 9. Ignorado. Descrição: Informar se houve encaminhamento para justiça da infnância e da . Campo obrigatório.
 
-<li>'DEFEN_PUBL' - Varchar2(1). Categoria: 1. Sim, 2. Não, 9. Ignorado. Descrição: Informar se houve encaminhamento para defensoria pública. Campo obrigatório.</li>
+'DEFEN_PUBL' - Varchar2(1). Categoria: 1. Sim, 2. Não, 9. Ignorado. Descrição: Informar se houve encaminhamento para defensoria pública. Campo obrigatório.
 
-<li>'DT_ENCERRA' - Date. Categoria: dd/mm/aaaa. Descrição: Data de encerramento do caso. Características: Campo ≥ data da notificação.</li>
+'DT_ENCERRA' - Date. Categoria: dd/mm/aaaa. Descrição: Data de encerramento do caso. Características: Campo ≥ data da notificação.
+
+Sem informações
+
+'ANO_NASC' - not found
+'SEX_PUDOR' - not found
+'REL_SEXUAL' - not found
+'TPUNINOT'- not found
+'CLASSI_FIN' - not found
+'EVOLUCAO' - not found
+'DT_OBITO' - not found
+'DT_DIGITA' - not found
+'DT_TRANSUS' - not found
+'DT_TRANSDM' - not found
+'DT_TRANSSM', 'DT_TRANSRM', 'DT_TRANSRS', 'DT_TRANSSE' -  all not found
+'PEN_ORAL', 'PEN_ANAL', 'PEN_VAGINA', 'PROC_DST', 'PROC_HIV', 'PROC_HEPB', 'PROC_SANG', 'PROC_SEMEN', 'PROC_VAGIN', 'PROC_CONTR', 'PROC_ABORT', 'CONS_ABORT', 'CONS_GRAV', 'CONS_DST', 'CONS_SUIC', 'CONS_MENT', 'CONS_COMP', 'CONS_ESTRE', 'CONS_OUTR', 'CONS_ESPEC', 'LESAO_NAT', 'LESAO_ESPE', 'LESAO_CORP', 'NUM_ENVOLV' - not found 
+
 </ul>
 <h2>Integrantes do grupo</h2>
 <ul>
